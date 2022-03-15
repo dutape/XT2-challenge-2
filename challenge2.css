@@ -1,0 +1,135 @@
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #232323;
+}
+#raket{
+	margin-bottom: 20px;
+	margin-top: 75px;
+	transition-duration: 2s;
+}
+#main:hover #raket{
+	transform: translate(0px,-100px);
+}
+#klok{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+div #sidebar{
+	padding: 20px 30px;
+}
+.uiterlijk {
+     font-size: 60px;
+     color: #fff;
+     font-weight: bold;
+}
+.image2{
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 15px;
+  align-self: center;
+  width: 80%;
+  height: auto;
+}
+
+.container {
+  display: grid;
+  height: 130vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 1.4fr 4.0fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "footer";
+  grid-gap: 0.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+}
+.footertekst{
+	text-align: left;
+	margin-left: 20px;
+}
+.copyright{
+	text-align: center;
+}
+  label.logo{
+	font-size: 35px;
+	font-weight: bold;
+	color: #FEFFFF;
+	padding: 0 100px;
+	line-height: 80px;
+} 
+nav {
+  background: #373737;
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+main {
+  background: #373737;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#sidebar {
+  background: #373737;
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+footer {
+  background: #373737;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+@media only screen and (min-width: 560px ) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+	height: 115vh;
+    grid-template-rows: 0.07fr 0.5fr 0.4fr 0.3fr;
+    grid-template-areas:
+      "nav nav nav"
+      "sidebar main main"
+      "sidebar main main"
+      "footer footer footer";
+	  
+}
+label.logo{
+	font-size: 35px;
+	font-weight: bold;
+	color: #FEFFFF;
+	padding: 0 100px;
+	line-height: 80px;
+}
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	height: 105vh;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.5fr;
+    grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar main main main"
+    "footer footer footer footer";
+  }
+label.logo{
+	font-size: 35px;
+	font-weight: bold;
+	color: #FEFFFF;
+	padding: 0 100px;
+	line-height: 80px;
+}
+}
